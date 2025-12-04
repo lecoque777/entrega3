@@ -1,0 +1,22 @@
+@mixin body{
+    width: 100%;
+    height: 100vh;
+    background-size: 300% 300%;
+    background-image: linear-gradient(337deg, #CCA0F3 25%, #5E3F68 35%, #f1c89f 65%, #561C69 90%);
+    animation: fondoAnimado 20s ease infinite;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+@mixin button{
+    font-size: 2.0em;
+    font-weight: bold;
+    padding: 10px 20px;  /*BOXMODEL*/
+    border-radius: 10px; /*BOXMODEL*/
+    border: 2px solid rgba(0,0,0,0.5); /*BOXMODEL*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

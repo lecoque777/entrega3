@@ -1,0 +1,17 @@
+/* ENCABEZADO */
+header {
+    display: flex; /* FLEXBOX */
+    justify-content: space-between;  /* FLEXBOX */
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 15px 40px; /*BOXMODEL*/
+    color: white;
+    flex-direction: column; /* FLEXBOX */
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f1c89f;
+    margin-bottom: 10px;  
+}

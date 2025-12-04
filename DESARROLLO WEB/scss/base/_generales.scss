@@ -1,0 +1,63 @@
+@use '../utilies/mixin';
+
+/* ESTILOS GENERALES Y TIPOGRAFÍA */
+/*probando*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;;
+}
+
+h1 { font-size: 2.7em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.8em; }
+p  { font-size: 1em; }
+ul { list-style: none; }
+li { font-size: 1.25em; }
+
+/* FONDO ANIMADO */
+body {
+@include mixin.body;         /*MIXIN*/
+}   
+
+.electrolize-regular, h1, h2, h3, h4, h5 {
+    font-family: "Electrolize", sans-serif;
+}
+
+
+@keyframes fondoAnimado {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* FUENTE GENERAL */
+.electrolize-regular {
+    font-family: Courier New, Consolas, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* BOTONES */
+button {
+@include mixin.button;         /*MIXIN*/
+}
+
+/*PSEUDOCLASES*/
+button:hover {
+    background-color: #ffffff;
+}
+
+/* CONTENEDORES */
+.container {
+    max-width: 700px;
+    margin: auto; /*BOXMODEL*/
+}
+
+.page {
+    width: 800px;
+    margin: 0 auto; /*BOXMODEL*/
+}

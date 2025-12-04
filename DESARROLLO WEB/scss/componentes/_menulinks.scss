@@ -1,0 +1,71 @@
+@use '../utilies/extend';
+/*MENU DE NAVEGACIÓN */
+.menu-btn {
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 28px;
+color: #f1c89f;
+cursor: pointer;
+z-index: 1100;
+user-select: none;
+transition: color 0.2s ease;
+}
+
+/*PSEUDOCLASES*/
+.menu-btn:hover {
+color: #ffffff;
+}
+
+.menu-toggle {
+display: none;
+}
+
+/* ======= MENÚ LATERAL ======= */
+.navbar {
+position: fixed;
+top: 0;
+left: -220px;
+width: 200px;
+height: 100vh;
+background-color: #0a0a0a;
+transition: left 0.3s ease;
+z-index: 1000;
+padding-top: 80px; /*BOXMODEL*/
+}
+
+
+.menu-toggle:checked + .menu-btn + .navbar {
+left: 0;
+}
+
+/* ======= LINKS ======= */
+.nav-links {
+list-style: none;
+padding: 0; /*BOXMODEL*/
+margin: 0; /*BOXMODEL*/
+}
+
+.nav-links li {
+margin: 20px 0; /*BOXMODEL*/
+text-align: center;
+}
+
+.nav-links a::after {
+content: "";
+@extend %flex-center;         /*EXTEND*/
+width: 0%;
+height: 2px;
+background: #fca400;
+transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+.nav-links a:hover {
+background-color: #f1c89f;
+color: #0a0a0a;
+border-radius: 8px; /*BOXMODEL*/
+}
